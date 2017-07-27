@@ -1,0 +1,24 @@
+@import "../../index";
+.go_top {
+  color: #fff;
+  background: rgba(0,0,0,.7);
+  width: 50*@px;
+  text-align: center;
+  height: 50*@px;
+  line-height: 50*@px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 499;
+  bottom: -100*@px;
+  right: 20*@px;
+  transition: .3s linear;
+  &.active {
+    bottom: 20*@px;
+    transition: .3s linear;
+  }
+
+  i {
+    font-size: 24*@px
+  }
+
+}

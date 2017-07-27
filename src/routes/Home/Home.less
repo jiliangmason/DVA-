@@ -1,0 +1,104 @@
+@import '../../index';
+
+#home {
+  background: #e1e1e1;
+  .banner_swiper {
+    height: 232*@px;
+    color: #fff;
+    font-size: 30*@px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &>div {
+    width: 100% !important
+  }
+
+  .slide img {
+    width: 100%
+  }
+
+  .go_more {
+    width: 150*@px;
+    height: 30*@px;
+    line-height: 30*@px;
+    text-align: center;
+    color: #616161;
+    border: 1px solid #aaa;
+    border-radius: 30*@px;
+    font-size: 13*@px;
+    margin: 0 auto;
+    margin-bottom: 15*@px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .now_playing,.coming_soon {
+    width: 100%;
+    padding-top: 20*@px;
+    padding-left: 15*@px;
+    padding-right: 15*@px;
+    box-sizing: border-box;
+    .item {
+      background: #f9f9f9;
+      margin-bottom: 20*@px;
+      box-shadow: 0 0 4px rgba(0,0,0,.4);
+
+      img {
+        width: 100%;
+
+      }
+
+      .desc{
+        padding: 5*@px 10*@px;
+        .box(justify,center)
+      }
+
+      .info {
+        font-size: 12*@px;
+        font-weight: 100;
+
+        p {
+          font-size: 10*@px;
+          color: #9a9a9a;
+        }
+      }
+
+      .count {
+        color: #f78360;
+        font-weight: 500;
+      }
+
+      .time {
+        font-size: 12*@px;
+        color: #f78360
+      }
+
+    }
+  }
+
+  .coming-title {
+    width: 100%;
+    height: 1px;
+    background: #a8a8a8;
+    position: relative;
+    margin-bottom: 20*@px;
+
+    div {
+      position: absolute;
+      color: #eee;
+      background: #a7a7a7;
+      font-size: 14*@px;
+      width: 80*@px;
+      height: 22*@px;
+      text-align: center;
+      line-height: 22*@px;
+      border-radius: 5*@px;
+      top: 50%;
+      left: 50%;
+      margin-top: -11*@px;
+      margin-left: -40*@px;
+    }
+  }
+
+}
