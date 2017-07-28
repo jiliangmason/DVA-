@@ -1,1 +1,140 @@
-
+html,
+body,
+:global(#root) {
+  height: 100%;
+  background: #e1e1e1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+button,
+input,
+select,
+textarea,
+:global(#root) {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 :global(#root) {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var :global(#root) {
+  font-style: normal;
+}
+small :global(#root) {
+  font-size: 12px;
+}
+ul :global(#root) {
+  list-style: none;
+}
+a :global(#root) {
+  text-decoration: none;
+  outline: none;
+}
+sup :global(#root) {
+  vertical-align: text-top;
+}
+sub :global(#root) {
+  vertical-align: text-bottom;
+}
+legend :global(#root) {
+  color: #000;
+}
+fieldset :global(#root) {
+  border: 0;
+}
+img :global(#root) {
+  border: 0;
+}
+button,
+input,
+select,
+textarea :global(#root) {
+  font-size: 100%;
+  outline: none;
+}
+table :global(#root) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a :global(#root) {
+  color: inherit;
+}
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+.nowrap {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#header {
+  background: #282828;
+  color: #999;
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-box-align: center;
+  box-align: center;
+}
+#header a {
+  display: block;
+}
+#header .go_menu,
+#header .go_mine {
+  width: 2.5rem;
+  text-align: center;
+  height: 2.4rem;
+}
+#header .go_menu i,
+#header .go_mine i {
+  color: #ffffff;
+}
+#header .go_menu {
+  border-right: 1px solid #222;
+  box-shadow: 1px 0 1px #363636;
+}
+#header .title {
+  width: 13.7rem;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-box-align: center;
+  box-align: center;
+}
+#header .title a {
+  color: #eaeaea;
+}
+#header .title a i {
+  color: #ffffff;
+  margin-left: 0.25rem;
+  font-size: 0.6rem;
+}
+#header .title p {
+  margin: 0;
+  color: #ffffff;
+}

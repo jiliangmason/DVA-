@@ -4,7 +4,7 @@
 import React from 'react';
 import {Icon} from 'antd';
 import styles from './BakTop.css';
-//import fontStyle from '../../icon/iconfont.css'
+import antStyle from '../../../node_modules/antd/dist/antd.css';
 
 export default class BakTop extends React.Component{
   constructor(props) {
@@ -30,7 +30,7 @@ export default class BakTop extends React.Component{
     const {bakTop} = this.props;
     return (
       <div className={bakTop ? `${styles.go_top} ${styles.active}` : styles.go_top} onClick={this.bakTop.bind(this)}>
-          <i className="icon iconfont icon-top-copy"></i>
+          <Icon type="rocket"/>
       </div>
     )
   }
