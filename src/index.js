@@ -14,6 +14,12 @@ app.use(createLoading());
 app.model(require("./models/home"));
 
 
+app.model(require("./models/film"));
+
+
+app.model(require("./models/detail"));
+
+
 // 4. Router
 app.router(require('./router'));
 

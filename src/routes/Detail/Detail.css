@@ -1,0 +1,146 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+  background: #e1e1e1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+button,
+input,
+select,
+textarea,
+:global(#root) {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 :global(#root) {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var :global(#root) {
+  font-style: normal;
+}
+small :global(#root) {
+  font-size: 12px;
+}
+ul :global(#root) {
+  list-style: none;
+}
+a :global(#root) {
+  text-decoration: none;
+  outline: none;
+}
+sup :global(#root) {
+  vertical-align: text-top;
+}
+sub :global(#root) {
+  vertical-align: text-bottom;
+}
+legend :global(#root) {
+  color: #000;
+}
+fieldset :global(#root) {
+  border: 0;
+}
+img :global(#root) {
+  border: 0;
+}
+button,
+input,
+select,
+textarea :global(#root) {
+  font-size: 100%;
+  outline: none;
+}
+table :global(#root) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a :global(#root) {
+  color: inherit;
+}
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+.nowrap {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#detail .no_tip {
+  font-size: 0.7rem;
+  color: #a1a1a1;
+  text-align: center;
+  margin-top: 1rem;
+}
+#detail .cover img {
+  width: 100%;
+}
+#detail .desc {
+  font-size: 0.65rem;
+  line-height: 230%;
+  padding: 0.75rem;
+}
+#detail .desc .title {
+  border-left: 0.8rem solid #e4c89c;
+  font-size: 0.8rem;
+  padding-left: 0.25rem;
+  margin-bottom: 1rem;
+  margin-left: -0.75rem;
+}
+#detail .desc .info p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#detail .desc .info p span {
+  display: inline-block;
+  margin-right: 0.05rem;
+}
+#detail .desc .info p span:after {
+  content: '|';
+}
+#detail .desc .info p span:last-child:after {
+  content: '';
+}
+#detail .desc .info p.p {
+  line-height: 150%;
+  margin-top: 0.25rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  white-space: normal;
+}
+#detail .go_pay {
+  width: 8rem;
+  height: 1.75rem;
+  background: #e38700;
+  border-radius: 1.75rem;
+  line-height: 1.75rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+  margin: 0.5rem auto;
+  display: block;
+}

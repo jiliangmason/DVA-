@@ -1,0 +1,160 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+  background: #e1e1e1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+button,
+input,
+select,
+textarea,
+:global(#root) {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 :global(#root) {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var :global(#root) {
+  font-style: normal;
+}
+small :global(#root) {
+  font-size: 12px;
+}
+ul :global(#root) {
+  list-style: none;
+}
+a :global(#root) {
+  text-decoration: none;
+  outline: none;
+}
+sup :global(#root) {
+  vertical-align: text-top;
+}
+sub :global(#root) {
+  vertical-align: text-bottom;
+}
+legend :global(#root) {
+  color: #000;
+}
+fieldset :global(#root) {
+  border: 0;
+}
+img :global(#root) {
+  border: 0;
+}
+button,
+input,
+select,
+textarea :global(#root) {
+  font-size: 100%;
+  outline: none;
+}
+table :global(#root) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a :global(#root) {
+  color: inherit;
+}
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+.nowrap {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.application_sidebar .leftNav_transition {
+  transition: right ease .4s;
+  -webkit-transition: right ease .4s;
+}
+.application_sidebar .sidebar_transition {
+  transition: all ease .4s;
+  -webkit-transition: all ease .4s;
+}
+.application_sidebar .sidebar_container {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #9a9a9a;
+}
+.application_sidebar .sidebar_container a {
+  color: #9a9a9a;
+  font-size: 0.7rem;
+}
+.application_sidebar .sidebar_container .sidebar_overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.application_sidebar .sidebar_container .sidebar_overlay .leftNav_enter {
+  right: 0;
+}
+.application_sidebar .sidebar_container .sidebar_overlay .leftNav_enter.leftNav_enter_active {
+  right: 19rem;
+  transition: right ease .4s;
+  -webkit-transition: right ease .4s;
+}
+.application_sidebar .sidebar_container .sidebar_overlay .leftNav_leave {
+  right: 19rem;
+}
+.application_sidebar .sidebar_container .sidebar_overlay .leftNav_leave.leftNav_leave_active {
+  right: 0;
+  transition: right ease .4s;
+  -webkit-transition: right ease .4s;
+}
+.application_sidebar .sidebar_container .sidebar_overlay nav {
+  border-top: 1px solid #222;
+  box-shadow: 0 1px 1px #363636 inset;
+  background: #282828;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 5.5rem;
+  bottom: 0;
+  left: 0;
+}
+.application_sidebar .sidebar_container .sidebar_overlay nav li {
+  overflow: hidden;
+  line-height: 2.5rem;
+  height: 2.55rem;
+}
+.application_sidebar .sidebar_container .sidebar_overlay nav li a {
+  display: block;
+  /*width: 100%;*/
+  padding: 0 0.8rem;
+  border-bottom: 1px dotted #333;
+}
+.application_sidebar .sidebar_container .sidebar_overlay nav li a .right {
+  float: right;
+  color: #666;
+  font-size: 0.7rem;
+}

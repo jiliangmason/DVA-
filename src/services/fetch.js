@@ -19,4 +19,25 @@ export function fetchComingSoon() {
   return request(`/api/film/coming-soon?__t=${new Date()*1}&page=1&count=3`);
 }
 
+/*
+* 获取电影详情信息
+* */
+export function fetchFilmDetails(id) {
+  return request(`/api/film/${id}/?__t=${new Date()*1}`)
+}
+
+/*
+* 获取NowPlayList的指定页数据
+* */
+export function fetchNowPlayItems(page) {
+  return request(`/api/film/now-playing?page=${page}&count=10`)
+}
+
+/*
+* 获取即将上映电影指定页
+* */
+export function fetchComingItems(page) {
+  return request(`/api/film/coming-soon?page=${page}&count=10`)
+}
+
 

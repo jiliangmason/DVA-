@@ -13,7 +13,6 @@ class Home extends React.Component {
   componentDidMount() {
     const {dispatch} = this.props;
     dispatch({type: 'home/fetchBanner'});
-    //dispatch({type: 'home/fetchNowPlay'});
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,11 +23,18 @@ class Home extends React.Component {
     //跳转
   }
 
-  comingLinkHandler() {
+  comingLinkHandler(id) {
     //跳转
+    const {dispatch} = this.props;
+    dispatch(routerRedux.push({
+      pathname: 'detail',
+      query: {
+        id: id
+      }
+    }))
   }
 
-  linkHandler() {
+  linkNowPlay() {
     const {dispatch} = this.props;
     dispatch(routerRedux.push({
       pathname: 'film',
@@ -38,7 +44,7 @@ class Home extends React.Component {
     }))
   }
 
-  linkMoreHandler() {
+  linkComSoon() {
     const {dispatch} = this.props;
     dispatch(routerRedux.push({
       pathname: 'film',
@@ -94,12 +100,12 @@ class Home extends React.Component {
           })
           : ''
           }
-          <a href="javascript:;" className={styles.go_more} onClick={this.linkHandler.bind(this)}>更多热映电影</a>
+          <a href="javascript:;" className={styles.go_more} onClick={this.linkNowPlay.bind(this)}>更多热映电影</a>
         </div>
         <div className={styles.coming_soon}>
           {
             coming.length&&coming.map((item, index)=>{
-              return (<div className={styles.item} key={index} onClick={this.comingLinkHandler.bind(this)}>
+              return (<div className={styles.item} key={index} onClick={this.comingLinkHandler.bind(this, item.id)}>
                   <img src={item.cover.origin} alt=""/>
                   <div className={styles.desc}>
                     <div className={styles.info}>
@@ -110,7 +116,7 @@ class Home extends React.Component {
               </div>)
             })
           }
-          <a href="javascript:;" className={styles.go_more} onClick={this.linkMoreHandler.bind(this)}>更多热映电影</a>
+          <a href="javascript:;" className={styles.go_more} onClick={this.linkComSoon.bind(this)}>更多热映电影</a>
         </div>
 
       </div>

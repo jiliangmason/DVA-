@@ -13,18 +13,24 @@ export default class Header extends React.Component {
 
   constructor(props) {
     super(props);
-
+    this.show = false;
   }
 
   componentDidMount() {
 
   }
 
+  barShowHandler() {
+    const {statusFn} = this.props;
+    this.show = !this.show;
+    statusFn(this.show)
+  }
+
   render() {
     const {title} = this.props;
     return (
       <div id={styles.header}>
-        <a className={styles.go_menu} href="javascript:;"><Icon type="bars"/></a>
+        <a className={styles.go_menu} href="javascript:;"><Icon onClick={this.barShowHandler.bind(this)} type="bars"/></a>
         <div className={styles.title}>
           <p>{title}</p>
           <a className={styles.go_city}>北京<Icon type="down"/></a>
