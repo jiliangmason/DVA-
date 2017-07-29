@@ -21,6 +21,7 @@ function RouterConfig({ history }) {
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
+        <Route path="home" component={Home}/>
         <Route path="detail" getComponents={Detail}/>
         <Route path="film" getComponents={Film}/>
       </Route>

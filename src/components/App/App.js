@@ -10,6 +10,9 @@ import Slider from '../../components/Slider/Slider';
 import BakTop from '../../components/BakTop/BakTop';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styles from './App.css';
+let EventEmitter = require('events');
+
+let emitter = new EventEmitter();
 
 export default class App extends React.Component {
   constructor(props) {
@@ -42,7 +45,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.flag = true;
-    window.addEventListener('scroll', this.scrollHandler, false)
+    window.addEventListener('scroll', this.scrollHandler, false);
   }
 
   componentWillUnmount() {
@@ -56,11 +59,17 @@ export default class App extends React.Component {
     })
   }
 
+  hideSlider() {
+    this.setState({
+      showSlider: false
+    })
+  }
+
   render() {
     return (
       <div>
         <Header statusFn={this.watchSliderStatus}/>
-        <Slider show={this.state.showSlider}/>
+        <Slider show={this.state.showSlider} hideFn={this.hideSlider.bind(this)}/>
         <ReactCSSTransitionGroup transitionName="page" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
           <div id="container" className={styles.container} key={this.props.location.pathname}>
             {this.props.children}

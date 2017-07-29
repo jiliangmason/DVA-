@@ -7,9 +7,11 @@
 import React from 'react';
 import styles from './Slider.css';
 import {Icon} from 'antd';
+import {routerRedux} from 'dva/router';
+import {connect} from 'dva';
 import antStyle from '../../../node_modules/antd/dist/antd.css';
 
-export default class Slider extends React.Component {
+class Slider extends React.Component {
 
   constructor(props) {
     super(props);
@@ -17,6 +19,14 @@ export default class Slider extends React.Component {
 
   componentDidMount() {
 
+  }
+
+  gotoHome() {
+    const {dispatch, hideFn} = this.props;
+    dispatch(routerRedux.push({
+      pathname: 'home'
+    }));
+    hideFn();
   }
 
   render() {
@@ -27,7 +37,7 @@ export default class Slider extends React.Component {
           <div className={styles.sidebar_overlay}>
             <nav className={styles.leftNav_transition} style={show?{right:110+'px'}:{right:320+'px'}}>
               <ul>
-                <li><a><span>首页</span><Icon type="right"/></a></li>
+                <li><a onClick={this.gotoHome.bind(this)}><span>首页</span><Icon type="right"/></a></li>
                 <li><a><span>影片</span><Icon type="right"/></a></li>
                 <li><a><span>影院</span><Icon type="right"/></a></li>
                 <li><a><span>我的</span><Icon type="right"/></a></li>
@@ -41,5 +51,11 @@ export default class Slider extends React.Component {
   }
 
 }
+
+function mapStateToProps(state) {
+  return {};
+}
+
+export default connect(mapStateToProps)(Slider);
 
 

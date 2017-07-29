@@ -19,8 +19,15 @@ class Home extends React.Component {
 
   }
 
-  playLinkHandler() {
+  playLinkHandler(id) {
     //跳转
+    const {dispatch} = this.props;
+    dispatch(routerRedux.push({
+      pathname: 'detail',
+      query: {
+        id: id
+      }
+    }))
   }
 
   comingLinkHandler(id) {
@@ -86,7 +93,7 @@ class Home extends React.Component {
             nowplay.length > 0
             ? nowplay.map((item, index)=> {
             return (
-              <div className={styles.item} key={index} onClick={this.playLinkHandler.bind(this)}>
+              <div className={styles.item} key={index} onClick={this.playLinkHandler.bind(this, item.id)}>
                 <img src={item.cover.origin} alt=""/>
                 <div className={styles.desc}>
                   <div className={styles.info}>
