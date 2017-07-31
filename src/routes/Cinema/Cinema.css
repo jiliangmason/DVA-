@@ -1,0 +1,177 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+  background: #e1e1e1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+button,
+input,
+select,
+textarea,
+:global(#root) {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 :global(#root) {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var :global(#root) {
+  font-style: normal;
+}
+small :global(#root) {
+  font-size: 12px;
+}
+ul :global(#root) {
+  list-style: none;
+}
+a :global(#root) {
+  text-decoration: none;
+  outline: none;
+}
+sup :global(#root) {
+  vertical-align: text-top;
+}
+sub :global(#root) {
+  vertical-align: text-bottom;
+}
+legend :global(#root) {
+  color: #000;
+}
+fieldset :global(#root) {
+  border: 0;
+}
+img :global(#root) {
+  border: 0;
+}
+button,
+input,
+select,
+textarea :global(#root) {
+  font-size: 100%;
+  outline: none;
+}
+table :global(#root) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a :global(#root) {
+  color: inherit;
+}
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+.nowrap {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#cinema .item > .title {
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #fff;
+  color: #636363;
+  font-size: 0.7rem;
+  padding-left: 0.75rem;
+}
+#cinema .item:last-child .title {
+  border-bottom: none;
+}
+#cinema .item .list {
+  display: none;
+}
+#cinema .item .list.active {
+  display: block;
+}
+#cinema .item .list .shop {
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 0.7rem;
+  padding: 0.75rem;
+  line-height: 180%;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-box-align: start;
+  box-align: start;
+}
+#cinema .item .list .shop .desc {
+  width: 15rem;
+}
+#cinema .item .list .shop .desc .title {
+  font-size: 0.8rem;
+}
+#cinema .item .list .shop .desc .title span {
+  font-size: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  text-align: center;
+  line-height: 0.7rem;
+  color: #fd9c77;
+  border: 1px solid #fd9c77;
+  margin-left: 0.25rem;
+}
+#cinema .item .list .shop .desc .title span:last-child {
+  color: #a5c1d5;
+  border: 1px solid #a5c1d5;
+}
+#cinema .item .list .shop .desc .tip {
+  padding: 0.25rem 0.5rem;
+}
+#cinema .item .list .shop .desc .tip span {
+  display: none;
+  color: #fff;
+  font-size: 0.55rem;
+  padding: 0rem 0.2rem;
+  border-radius: 0.2rem;
+}
+#cinema .item .list .shop .desc .tip span.sundry {
+  background: #51add0;
+  margin-right: 0.4rem;
+  display: inline-block;
+}
+#cinema .item .list .shop .desc .tip span.discount {
+  background: #ff9658;
+  display: inline-block;
+}
+#cinema .item .list .shop .desc .area {
+  color: #ccc;
+  font-size: 0.65rem;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#cinema .item .list .shop .desc .extra {
+  color: #ccc;
+  font-size: 0.65rem;
+}
+#cinema .item .list .shop .price {
+  width: 2.25rem;
+  color: #fc8637;
+  font-size: 0.8rem;
+}

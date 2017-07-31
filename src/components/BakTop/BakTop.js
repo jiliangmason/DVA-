@@ -16,7 +16,7 @@ export default class BakTop extends React.Component{
     let timer = null;
     timer = setInterval(()=>{
       if (document.body.scrollTop > 0) {
-        document.body.scrollTop = document.body.scrollTop - speed > 0 ? document.body.scrollTop - speed : 0
+        document.body.scrollTop = document.body.scrollTop - speed > 0 ? document.body.scrollTop - speed : 0;
         speed += 20;
       }
       else {

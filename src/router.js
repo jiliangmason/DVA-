@@ -16,6 +16,12 @@ const Film = (location, cb)=>{
     }, 'film/:type');
 };
 
+const Cinema = (location, cb)=>{
+    require.ensure([], require=>{
+      cb(null, require('./routes/Cinema/Cinema'))
+    }, 'cinema/:id');
+};
+
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -24,6 +30,7 @@ function RouterConfig({ history }) {
         <Route path="home" component={Home}/>
         <Route path="detail" getComponents={Detail}/>
         <Route path="film" getComponents={Film}/>
+        <Route path="cinema" getComponents={Cinema}/>
       </Route>
     </Router>
   );

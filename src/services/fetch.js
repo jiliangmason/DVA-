@@ -27,6 +27,13 @@ export function fetchFilmDetails(id) {
 }
 
 /*
+* 获取影院详情信息
+* */
+export function fetCinemaDetails(id) {
+  return request(`/api/film/${id}/cinema?__t=${new Date()*1}`)
+}
+
+/*
 * 获取NowPlayList的指定页数据
 * */
 export function fetchNowPlayItems(page) {

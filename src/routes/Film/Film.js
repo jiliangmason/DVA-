@@ -10,6 +10,7 @@ import {Icon} from 'antd';
 import {connect} from 'dva';
 import styles from './Film.css';
 import FormatDate from '../../utils/time';
+import {routerRedux} from 'dva/router';
 import antStyle from '../../../node_modules/antd/dist/antd.css';
 
 class Film extends React.Component {
@@ -72,11 +73,23 @@ class Film extends React.Component {
   }
 
   gotoTicket(id) {
-
+    const {dispatch} = this.props;
+    dispatch(routerRedux.push({
+      pathname: 'cinema',
+      query: {
+        id: id
+      }
+    }))
   };
 
   gotoDetail(id) {
-
+    const {dispatch} = this.props;
+    dispatch(routerRedux.push({
+      pathname: 'detail',
+      query: {
+        id: id
+      }
+    }))
   };
 
   changeTabHandler(tab) {

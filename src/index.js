@@ -14,6 +14,9 @@ app.use(createLoading());
 app.model(require("./models/home"));
 
 
+app.model(require("./models/cinema"));
+
+
 app.model(require("./models/film"));
 
 
