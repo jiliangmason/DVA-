@@ -1,16 +1,15 @@
 @import "../../index";
 .application_sidebar {
-
-  .leftNav_transition{
-    transition: right ease .4s;
-    -webkit-transition: right ease .4s;
-  }
   .sidebar_transition{
     transition: all ease .4s;
     -webkit-transition: all ease .4s;
   }
+  .leftNav_transition{
+    transition: right ease .5s;
+    -webkit-transition: right ease .5s;
+  }
   .sidebar_container {
-    opacity: 1;
+    //opacity: 1;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -28,11 +27,13 @@
       right: 0;
       bottom: 0;
       left: 0;
-      .leftNav_enter {
+
+
+      /*.leftNav_enter {
         right: 0;
       }
 
-      .leftNav_enter.leftNav_enter_active {
+      .leftNav_enter_active {
         right: 380*@px;
         transition: right ease .4s;
         -webkit-transition: right ease .4s;
@@ -42,11 +43,13 @@
         right: 380*@px;
       }
 
-      .leftNav_leave.leftNav_leave_active {
+      .leftNav_leave_active {
         right: 0;
         transition: right ease .4s;
         -webkit-transition: right ease .4s;
-      }
+      }*/
+
+
       nav {
         border-top: 1px solid #222;
         box-shadow: 0 1px 1px #363636 inset;
@@ -54,7 +57,7 @@
         position: absolute;
         display: block;
         top: 0;
-        right: 110*@px;
+        //right: 110*@px;
         bottom: 0;
         left: 0;
 

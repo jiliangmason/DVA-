@@ -86,16 +86,15 @@ a :global(#root) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.application_sidebar .leftNav_transition {
-  transition: right ease .4s;
-  -webkit-transition: right ease .4s;
-}
 .application_sidebar .sidebar_transition {
   transition: all ease .4s;
   -webkit-transition: all ease .4s;
 }
+.application_sidebar .leftNav_transition {
+  transition: right ease .5s;
+  -webkit-transition: right ease .5s;
+}
 .application_sidebar .sidebar_container {
-  opacity: 1;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -114,22 +113,25 @@ a :global(#root) {
   right: 0;
   bottom: 0;
   left: 0;
-}
-.application_sidebar .sidebar_container .sidebar_overlay .leftNav_enter {
-  right: 0;
-}
-.application_sidebar .sidebar_container .sidebar_overlay .leftNav_enter.leftNav_enter_active {
-  right: 19rem;
-  transition: right ease .4s;
-  -webkit-transition: right ease .4s;
-}
-.application_sidebar .sidebar_container .sidebar_overlay .leftNav_leave {
-  right: 19rem;
-}
-.application_sidebar .sidebar_container .sidebar_overlay .leftNav_leave.leftNav_leave_active {
-  right: 0;
-  transition: right ease .4s;
-  -webkit-transition: right ease .4s;
+  /*.leftNav_enter {
+        right: 0;
+      }
+
+      .leftNav_enter_active {
+        right: 380*@px;
+        transition: right ease .4s;
+        -webkit-transition: right ease .4s;
+      }
+
+      .leftNav_leave {
+        right: 380*@px;
+      }
+
+      .leftNav_leave_active {
+        right: 0;
+        transition: right ease .4s;
+        -webkit-transition: right ease .4s;
+      }*/
 }
 .application_sidebar .sidebar_container .sidebar_overlay nav {
   border-top: 1px solid #222;
@@ -138,7 +140,6 @@ a :global(#root) {
   position: absolute;
   display: block;
   top: 0;
-  right: 5.5rem;
   bottom: 0;
   left: 0;
 }
