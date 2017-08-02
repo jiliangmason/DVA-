@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute} from 'dva/router';
 import App from './components/App/App';
 import Home from './routes/Home/Home';
-
+import Login from './components/Login/Login';
 
 const Detail = (location, cb)=>{
     require.ensure([], require=>{
@@ -28,6 +28,7 @@ function RouterConfig({ history }) {
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
         <Route path="home" component={Home}/>
+        <Route path="login" component={Login} />
         <Route path="detail" getComponents={Detail}/>
         <Route path="film" getComponents={Film}/>
         <Route path="cinema" getComponents={Cinema}/>

@@ -29,6 +29,37 @@ class Slider extends React.Component {
     hideFn();
   }
 
+  gotoFilm() {
+    const {dispatch, hideFn} = this.props;
+    dispatch(routerRedux.push({
+      pathname: 'film'
+    }));
+    hideFn();
+  }
+
+  gotoCinema() {
+    //let id = '1501690596752';
+    /*const {dispatch, hideFn, nowPlayingList} = this.props;
+    if (nowPlayingList.length > 0) {
+      dispatch(routerRedux.push({
+        pathname: 'cinema',
+        query: {
+          id: nowPlayingList[0].id
+        }
+      }));
+    }*/
+
+    //hideFn();
+  }
+
+  gotoLogin() {
+    const {dispatch, hideFn} = this.props;
+    dispatch(routerRedux.push({
+      pathname: 'login'
+    }));
+    hideFn();
+  }
+
   render() {
     const {show} = this.props;
     return (
@@ -38,10 +69,9 @@ class Slider extends React.Component {
             <nav className={styles.leftNav_transition} style={show?{right:110+'px'}:{right:320+'px'}}>
               <ul>
                 <li><a onClick={this.gotoHome.bind(this)}><span>首页</span><Icon type="right"/></a></li>
-                <li><a><span>影片</span><Icon type="right"/></a></li>
-                <li><a><span>影院</span><Icon type="right"/></a></li>
-                <li><a><span>我的</span><Icon type="right"/></a></li>
-                <li><a><span>卖座网查询</span><Icon type="right"/></a></li>
+                <li><a onClick={this.gotoFilm.bind(this)}><span>影片</span><Icon type="right"/></a></li>
+                <li><a onClick={this.gotoCinema.bind(this)}><span>影院</span><Icon type="right"/></a></li>
+                <li><a onClick={this.gotoLogin.bind(this)}><span>我的</span><Icon type="right"/></a></li>
               </ul>
             </nav>
           </div>
@@ -53,7 +83,9 @@ class Slider extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    //nowPlayingList: state.film.nowPlayingList,
+  };
 }
 
 export default connect(mapStateToProps)(Slider);
